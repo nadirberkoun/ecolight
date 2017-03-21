@@ -5,7 +5,7 @@ try {
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
-
+$save = true;
 //enregistrement
 if (isset($_POST['enregistrer']) && ($_POST['enregistrer'] == "Enregistrer")) {
     $MessageForm = array();
@@ -25,10 +25,11 @@ if (isset($_POST['enregistrer']) && ($_POST['enregistrer'] == "Enregistrer")) {
         $req = $dbh->prepare($sql);
         $bResult = $req->execute($tab);
 
-        header('Location : connexion.php');
+        if ($bResult) {
+            header('Location: connexion.php');
+            exit();
+        }
     } else {
-        header('Location: enregistrement.php');
-        echo "Mot de passe       ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd      dc incorect";
-
+        $save = false;
     }
 }
