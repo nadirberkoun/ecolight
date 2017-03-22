@@ -9,4 +9,13 @@ require_once 'pdo.php';
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" charset="UTF-8"/>
 
 <!-- form info complémentaires -->
+
 <p> form complémentaire</p>
+</br>
+<?php
+    if (!empty($_SESSION)) {
+        echo "Bienvenue " . $_SESSION['nom'] . " " . $_SESSION['prenom'];
+    } else {
+            echo "Vous êtes déconnecté.";
+        }
+?>

@@ -11,8 +11,9 @@ require_once 'pdo.php';
 <!-- connexion -->
 <div class="text-center" style="padding:50px 0">
     <div class="logo">Connexion</div>
+    <p><?= $msg; ?></p>
     <div class="login-form-1">
-        <form id="login-form" class="text-left">
+        <form id="login-form" class="text-left" action="connexion.php" method="POST" >
             <div class="login-form-main-message"></div>
             <div class="main-login-form">
                 <div class="login-group">
@@ -37,6 +38,7 @@ require_once 'pdo.php';
                 <p>Mot de passe oublié ? <a href="new_pwd.php">Cliquez ici !</a></p>
                 <p>Nouvel utilisateur ? <a href="enregistrement.php">S'enregistrer</a></p>
             </div>
+            <?php //var_dump($sInfo); ?>
         </form>
     </div>
     <!-- end:Main Form -->
