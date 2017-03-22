@@ -38,7 +38,7 @@ require_once 'pdo.php';
                 <p>Mot de passe oublié ? <a href="new_pwd.php">Cliquez ici !</a></p>
                 <p>Nouvel utilisateur ? <a href="enregistrement.php">S'enregistrer</a></p>
             </div>
-            <?php //var_dump($sInfo); ?>
+            <?php// var_dump($_SESSION); ?>
         </form>
     </div>
     <!-- end:Main Form -->

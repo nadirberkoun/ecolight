@@ -75,8 +75,6 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == "Connexion") {
 
         if ($sInfo) {
             $_SESSION['login'] = $login;
-            $_SESSION['nom'] = $sInfo['nom'];
-            $_SESSION['prenom'] = $sInfo['prenom'];
             header('Location: info_compl.php');
             exit();
         } else {

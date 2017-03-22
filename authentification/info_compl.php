@@ -12,7 +12,7 @@ require_once 'pdo.php';
 
 <?php
     if (!empty($_SESSION)) {
-        echo "Bienvenue " ." ". $_SESSION['nom']. " " . $_SESSION['prenom']." "."Veuillez renseigner ces informations :";
+        echo "Bienvenue ".$_SESSION['login']." Veuillez renseigner ces informations :";
     } else {
             echo "Vous êtes déconnecté.";
         }
