@@ -6,12 +6,11 @@ require_once 'pdo.php';
 <link rel="stylesheet" href="style.css">
 <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 <script src="index.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" charset="UTF-8" />
 
 <!-- connexion -->
 <div class="text-center" style="padding:50px 0">
     <div class="logo">Connexion</div>
-    <!-- Main Form -->
     <div class="login-form-1">
         <form id="login-form" class="text-left">
             <div class="login-form-main-message"></div>
@@ -32,7 +31,7 @@ require_once 'pdo.php';
                                                                     <label for="lg_remember">remember</label>
                                                             </div>-->
                 </div>
-                <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+                <input type="submit" name="connexion" value="Connexion" class="button">
             </div>
             <div class="etc-login-form">
                 <p>Mot de passe oublié ? <a href="new_pwd.php">Cliquez ici !</a></p>

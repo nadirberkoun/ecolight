@@ -6,7 +6,7 @@ require_once 'pdo.php';
 <link rel="stylesheet" href="style.css">
 <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 <script src="index.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" charset="UTF-8" />
 
 <!-- enregistrement -->
 
@@ -36,10 +36,14 @@ require_once 'pdo.php';
                         <label for="email" class="sr-only">Email :</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="email" required>
                     </div>
-                    <!--	<div class="form-group">
-                                <label for="nom" class="sr-only">Nom  :</label>
-                                <input type="text" class="form-control" id="nom" name="nom" placeholder="nom">
-                            </div>-->
+                    <div class="form-group">
+                        <label for="nom" class="sr-only">Nom  :</label>
+                        <input type="text" class="form-control" id="nom" name="nom" placeholder="nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom" class="sr-only">Prenom  :</label>
+                        <input type="text" class="form-control" id="prenom" name="prenom" placeholder="prénom">
+                    </div>
                     <!--	<div class="form-group login-group-checkbox">
                                 <input type="radio" class="" name="reg_gender" id="male" placeholder="username">
                                 <label for="male">male</label>
