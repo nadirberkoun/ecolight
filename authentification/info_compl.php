@@ -32,7 +32,7 @@ require_once 'pdo.php';
                         <input type="text" class="form-control" id="adresse" name="adresse" placeholder="votre adresse" required>
                     </div>
                     <div class="form-group">
-                        <label for="ville" class="sr-only">Ville :</label>
+                        <label for="ville" class="sr-only">Ville :</br></label>
                         <input type="text" class="form-control" id="ville" name="ville" placeholder="ville" required>
                     </div>
                     <div class="form-group">

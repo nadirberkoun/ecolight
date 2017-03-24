@@ -29,7 +29,7 @@ require_once 'pdo.php';
                         <input type="password" class="form-control" id="password" name="password" placeholder="mot de passe" required>
                     </div>
                     <div class="form-group">
-                        <label for="password_confirm" class="sr-only">Confirmation mot de passe :</label>
+                        <label for="password_confirm" class="sr-only">Confirmer :</label>
                         <input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="mot de passe" required>
                     </div>
                     <div class="form-group">
@@ -37,7 +37,7 @@ require_once 'pdo.php';
                         <input type="email" class="form-control" id="email" name="email" placeholder="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="nom" class="sr-only">Nom  :</label>
+                        <label for="nom" class="sr-only">Nom  :</br></label>
                         <input type="text" class="form-control" id="nom" name="nom" placeholder="nom">
                     </div>
                     <div class="form-group">
