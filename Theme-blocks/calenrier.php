@@ -1,3 +1,14 @@
+<?php
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+?>
+
+
 <!doctype html>
 <html><head>
     <meta charset="utf-8">
@@ -33,7 +44,7 @@
 
   	<!-- Google Fonts call. Font Used Open Sans -->
   	<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-  	
+
   	<!-- FullCalendar Files - JS & CSS Configuration -->
   	<link rel="stylesheet" type="text/css" href="assets/fullcalendar/fullcalendar.css">
 	<link rel="stylesheet" type="text/css" href="assets/fullcalendar/fullcalendar.print.css" media="print">
@@ -45,35 +56,35 @@
   	<!-- FullCalendar Initializaiton -->
 
 	$(document).ready(function() {
-	
-	
+
+
 		/* initialize the external events
 		-----------------------------------------------------------------*/
-	
+
 		$('#external-events div.external-event').each(function() {
-		
+
 			// create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
 			// it doesn't need to have a start or end
 			var eventObject = {
 				title: $.trim($(this).text()) // use the element's text as the event title
 			};
-			
+
 			// store the Event Object in the DOM element so we can get to it later
 			$(this).data('eventObject', eventObject);
-			
+
 			// make the event draggable using jQuery UI
 			$(this).draggable({
 				zIndex: 999,
 				revert: true,      // will cause the event to go back to its
 				revertDuration: 0  //  original position after the drag
 			});
-			
+
 		});
-	
-	
+
+
 		/* initialize the calendar
 		-----------------------------------------------------------------*/
-		
+
 		$('#calendar').fullCalendar({
 			header: {
 				left: 'prev,next today',
@@ -83,34 +94,34 @@
 			editable: true,
 			droppable: true, // this allows things to be dropped onto the calendar !!!
 			drop: function(date, allDay) { // this function is called when something is dropped
-			
+
 				// retrieve the dropped element's stored Event Object
 				var originalEventObject = $(this).data('eventObject');
-				
+
 				// we need to copy it, so that multiple events don't have a reference to the same object
 				var copiedEventObject = $.extend({}, originalEventObject);
-				
+
 				// assign it the date that was reported
 				copiedEventObject.start = date;
 				copiedEventObject.allDay = allDay;
-				
+
 				// render the event on the calendar
 				// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
 				$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
-				
+
 				// is the "remove after drop" checkbox checked?
 				if ($('#drop-remove').is(':checked')) {
 					// if so, remove the element from the "Draggable Events" list
 					$(this).remove();
 				}
-				
+
 			}
 		});
 	});
 
 </script>
 
-  	
+
   </head>
   <body>
   	<!-- NAVIGATION MENU -->
@@ -124,15 +135,12 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.html"><img src="assets/img/logo30.png" alt=""> BLOCKS Dashboard</a>
-        </div> 
+        </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li><a href="index.html"><i class="icon-home icon-white"></i> Home</a></li>
-              <li><a href="manager.html"><i class="icon-folder-open icon-white"></i> File Manager</a></li>
               <li class="active"><a href="calendar.html"><i class="icon-calendar icon-white"></i> Calendar</a></li>
               <li><a href="tables.html"><i class="icon-th icon-white"></i> Tables</a></li>
-              <li><a href="login.html"><i class="icon-lock icon-white"></i> Login</a></li>
-              <li><a href="user.html"><i class="icon-user icon-white"></i> User</a></li>
 
             </ul>
           </div><!--/.nav-collapse -->
@@ -177,7 +185,7 @@
       			</div>
 
       		</div><!-- /row -->
-      	</div><!-- /container -->		
+      	</div><!-- /container -->
 	</div><!-- /footerwrap -->
 
 
@@ -186,7 +194,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="assets/js/admin.js"></script>
-    
 
-  
+
+
 </body></html>
+
+
