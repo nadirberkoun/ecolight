@@ -24,13 +24,13 @@ if (isset($_POST['enregistrer']) && ($_POST['enregistrer'] == "Enregistrer")) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
 
-    $tab = array(
+    $tab = [
         ':login' => $login,
         ':password' => $password,
         ':email' => $email,
         ':nom' => $nom,
         ':prenom' => $prenom
-    );
+    ];
 
     if ($password === $password_confirm) {
         $sql = "INSERT INTO `Utilisateur` (`id_util`, `login_util`, `mdp_util`, `mail_util`, `nom_util`, `prenom_util`) VALUES (null, :login, :password, :email, :nom, :prenom)";
@@ -103,7 +103,7 @@ if (isset($_POST['complement']) && ($_POST['complement'] == "Enregistrer")) {
         ':login' => $login
     ];
 
-        $sql = "INSERT INTO `Utilisateur` (`id_util`, `adresse_util`, `ville_util`, `cp_util`, `tel_util`) VALUES (null, :adresse, :ville, :cp, :tel) WHERE `login_util` = :login";
+        $sql = "UPDATE `Utilisateur` SET `adresse_util` = :adresse, `ville_util` = :ville, `cp_util` = :cp, `tel_util` = :tel WHERE `login_util` = :login";
         $req = $dbh->prepare($sql);
         $result = $req->execute($tab);
 
@@ -114,4 +114,4 @@ if (isset($_POST['complement']) && ($_POST['complement'] == "Enregistrer")) {
 
 }
 
-
+//test
