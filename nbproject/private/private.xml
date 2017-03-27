@@ -3,13 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/ecolight/authentification/info_compl.php</file>
-            <file>file:/C:/wamp/www/ecolight/authentification/pdo.php</file>
-            <file>file:/C:/wamp/www/ecolight/authentification/new_pwd.php</file>
-            <file>file:/C:/wamp/www/ecolight/authentification/connexion.php</file>
-            <file>file:/C:/wamp/www/ecolight/index.php</file>
-            <file>file:/C:/wamp/www/ecolight/authentification/style.css</file>
-            <file>file:/C:/wamp/www/ecolight/authentification/enregistrement.php</file>
+            <file>file:/var/www/html/ecolight/authentification/new_pwd.php</file>
+            <file>file:/var/www/html/ecolight/authentification/accueil.php</file>
+            <file>file:/var/www/html/ecolight/authentification/pdo.php</file>
+            <file>file:/var/www/html/ecolight/authentification/enregistrement.php</file>
+            <file>file:/var/www/html/ecolight/authentification/info_compl.php</file>
+            <file>file:/var/www/html/ecolight/authentification/style.css</file>
+            <file>file:/var/www/html/ecolight/authentification/connexion.php</file>
         </group>
     </open-files>
 </project-private>
