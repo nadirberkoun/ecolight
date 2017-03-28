@@ -6,7 +6,6 @@
  * and open the template in the editor.
  */
 ?>
-
 <!doctype html>
 <html><head>
         <meta charset="utf-8">

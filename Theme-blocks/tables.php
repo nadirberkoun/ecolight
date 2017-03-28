@@ -74,7 +74,6 @@
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li><a href="index.php"><i class="icon-home icon-white"></i> Home</a></li>
-              <li><a href="calendrier.php"><i class="icon-calendar icon-white"></i> Calendar</a></li>
               <li class="active"><a href="tables.php"><i class="icon-th icon-white"></i> Tables</a></li>
 
             </ul>
