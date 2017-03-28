@@ -69,11 +69,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php"><img src="assets/img/logo30.png" alt=""> BLOCKS Dashboard</a>
+          <a class="navbar-brand" href="index2.php"><img src="assets/img/logo30.png" alt=""> BLOCKS Dashboard</a>
         </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="index.php"><i class="icon-home icon-white"></i> Home</a></li>
+              <li><a href="index2.php"><i class="icon-home icon-white"></i> Home</a></li>
               <li class="active"><a href="tables.php"><i class="icon-th icon-white"></i> Tables</a></li>
 
             </ul>
