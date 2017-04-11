@@ -1,5 +1,5 @@
 <?php
-
+require_once 'pdo.php';
 ?>
 <!doctype html>
 <html><head>
@@ -106,7 +106,7 @@
                         <div class="thumbnail">
                             <img src="assets/img/face80x80.jpg" alt="Marcel Newman" class="img-circle">
                         </div><!-- /thumbnail -->
-                        <h1>Marcel Newman</h1>
+                        <h1><?php echo $test ?></h1>
                         <h3>Madrid, Spain</h3>
                         <br>
                         <div class="info-user">
