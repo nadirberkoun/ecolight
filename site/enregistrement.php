@@ -44,6 +44,22 @@ require_once 'pdo.php';
                         <label for="prenom" class="sr-only">Prenom  :</label>
                         <input type="text" class="form-control" id="prenom" name="prenom" placeholder="prénom">
                     </div>
+                    <div class="form-group">
+                        <label for="adresse" class="sr-only"> Adresse :</label>
+                        <input type="text" class="form-control" id="adresse" name="adresse" placeholder="votre adresse" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ville" class="sr-only">Ville :</br></label>
+                        <input type="text" class="form-control" id="ville" name="ville" placeholder="ville" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cp" class="sr-only">Code postal :</label>
+                        <input type="text" class="form-control" id="cp" name="cp" placeholder="code postal" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="sr-only">Téléphone :</label>
+                        <input type="text" class="form-control" id="tel" name="tel" placeholder="téléphone" required>
+                    </div>
                     <!--	<div class="form-group login-group-checkbox">
                                 <input type="radio" class="" name="reg_gender" id="male" placeholder="username">
                                 <label for="male">male</label>

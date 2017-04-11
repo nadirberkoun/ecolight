@@ -7,7 +7,7 @@ try {
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
-$test ="BOB";
+$test = 'bobobobobobbbbbb';
 $msg = '';
 
 //enregistrement
@@ -23,17 +23,25 @@ if (isset($_POST['enregistrer']) && ($_POST['enregistrer'] == "Enregistrer")) {
     $email = $_POST['email'];
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
+    $adresse = $_POST['adresse'];
+    $ville = $_POST['ville'];
+    $cp = $_POST['cp'];
+    $tel = $_POST['tel'];
 
     $tab = [
         ':login' => $login,
         ':password' => $password,
         ':email' => $email,
         ':nom' => $nom,
-        ':prenom' => $prenom
+        ':prenom' => $prenom,
+        ':adresse' => $adresse,
+        ':ville' => $ville,
+        ':cp' => $cp,
+        ':tel' => $tel
     ];
 
     if ($password === $password_confirm) {
-        $sql = "INSERT INTO `utilisateur` (`id_util`, `login_util`, `mdp_util`, `mail_util`, `nom_util`, `prenom_util`) VALUES (null, :login, :password, :email, :nom, :prenom)";
+        $sql = "INSERT INTO `utilisateur` (`id_util`, `login_util`, `mdp_util`, `mail_util`, `nom_util`, `prenom_util`, `adresse_util`, `ville_util`, `cp_util`, `tel_util`) VALUES (null, :login, :password, :email, :nom, :prenom, :adresse, :ville, :cp, :tel)";
         $req = $dbh->prepare($sql);
         $result = $req->execute($tab);
 
@@ -45,6 +53,8 @@ if (isset($_POST['enregistrer']) && ($_POST['enregistrer'] == "Enregistrer")) {
         $save = false;
     }
 }
+
+
 
 
 // connexion (session?)
@@ -77,23 +87,7 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == "Connexion") {
 
         if ($sInfo) {
             $_SESSION['login'] = $login;
-
-
-            $sql2 = "SELECT adresse_util, ville_util, CP_util, tel_util  FROM `utilisateur` WHERE `login_util` = :login";
-            $statement = $dbh->prepare($sql2);
-            $statement->execute([':login'=> $login]);
-            $sInfo2 = $statement->fetch(PDO::FETCH_ASSOC);
-
-
-            if($sql2 == 0) {
-//                var_dump( mysql_num_rows($result));
-//                die('motherfucker');
-                header('Location: info_compl.php');
-                exit();
-            } else {
-                header('Location: index2.php');
-                exit();
-            }
+            
         } else {
             $msg = 'Mot de passe incorrect';
         }
@@ -103,32 +97,32 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == "Connexion") {
 
 // info complémentaires
 
-if (isset($_POST['complement']) && ($_POST['complement'] == "Enregistrer")) {
-    $MessageForm = array();
-
-    $adresse = $_POST['adresse'];
-    $ville = $_POST['ville'];
-    $cp = $_POST['cp'];
-    $tel = $_POST['tel'];
-    $login = $_SESSION['login'];
-
-    $tab = [
-        ':adresse' => $adresse,
-        ':ville' => $ville,
-        ':cp' => $cp,
-        ':tel' => $tel,
-        ':login' => $login
-    ];
-
-        $sql = "UPDATE `utilisateur` SET `adresse_util` = :adresse, `ville_util` = :ville, `cp_util` = :cp, `tel_util` = :tel WHERE `login_util` = :login";
-        $req = $dbh->prepare($sql);
-        $result = $req->execute($tab);
-
-        if ($result) {
-            header('Location: index2.php');
-            exit();
-        }
-
-}
+//if (isset($_POST['complement']) && ($_POST['complement'] == "Enregistrer")) {
+//    $MessageForm = array();
+//
+//    $adresse = $_POST['adresse'];
+//    $ville = $_POST['ville'];
+//    $cp = $_POST['cp'];
+//    $tel = $_POST['tel'];
+//    $login = $_SESSION['login'];
+//
+//    $tab = [
+//        ':adresse' => $adresse,
+//        ':ville' => $ville,
+//        ':cp' => $cp,
+//        ':tel' => $tel,
+//        ':login' => $login
+//    ];
+//
+//        $sql = "UPDATE `utilisateur` SET `adresse_util` = :adresse, `ville_util` = :ville, `cp_util` = :cp, `tel_util` = :tel WHERE `login_util` = :login";
+//        $req = $dbh->prepare($sql);
+//        $result = $req->execute($tab);
+//
+//        if ($result) {
+//            header('Location: index2.php');
+//            exit();
+//        }
+//
+//}
 
 //test
