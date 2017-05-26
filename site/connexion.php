@@ -13,7 +13,7 @@ require_once 'pdo.php';
     <div class="logo">Connexion</div>
     <p><?= $msg; ?></p>
     <div class="login-form-1">
-        <form id="login-form" class="text-left" action="connexion.php" method="POST" >
+        <form id="login-form" class="text-left" action="register" method="POST" >
             <div class="login-form-main-message"></div>
             <div class="main-login-form">
                 <div class="login-group">

@@ -1,5 +1,7 @@
 <?php
 require_once 'pdo.php';
+print_r($_SESSION);
+print_r($sInfo);
 ?>
 <!doctype html>
 <html><head>
@@ -95,18 +97,18 @@ require_once 'pdo.php';
 
 
 
- <!-- FIRST ROW OF BLOCKS -->
+            <!-- FIRST ROW OF BLOCKS -->
             <div class="row">
 
                 <!-- USER PROFILE BLOCK -->
-                <div class="col-sm-3 col-lg-3">
+                <div class="col-sm-6 col-lg-6">
                     <div class="dash-unit">
                         <dtitle>User Profile</dtitle>
                         <hr>
                         <div class="thumbnail">
                             <img src="assets/img/face80x80.jpg" alt="Marcel Newman" class="img-circle">
                         </div><!-- /thumbnail -->
-                        <h1><?php echo $test ?></h1>
+                        <h1><?php echo $_SESSION['login'] ?></h1>
                         <h3>Madrid, Spain</h3>
                         <br>
                         <div class="info-user">
@@ -118,29 +120,76 @@ require_once 'pdo.php';
                     </div>
                 </div>
 
-                <!-- DONUT CHART BLOCK -->
-                <div class="col-sm-3 col-lg-3">
+                <div class="col-sm-6 col-lg-6">
+                    <!-- MAIL BLOCK -->
+
                     <div class="dash-unit">
-                        <dtitle>Site Bandwidth</dtitle>
+                        <dtitle>Inbox (1)</dtitle>
                         <hr>
-                        <div id="load"></div>
-                        <h2>45%</h2>
-                    </div>
-                </div>
+                        <div class="framemail">
+                            <div class="window">
+                                <ul class="mail">
+                                    <li>
+                                        <i class="unread"></i>
+                                        <img class="avatar" src="assets/img/photo01.jpeg" alt="avatar">
+                                        <p class="sender">Adam W.</p>
+                                        <p class="message"><strong>Working</strong> - This is the last...</p>
+                                        <div class="actions">
+                                            <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
+                                            <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
+                                            <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/tag.png" alt="label"></a>
+                                            <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="read"></i>
+                                        <img class="avatar" src="assets/img/photo02.jpg" alt="avatar">
+                                        <p class="sender">Dan E.</p>
+                                        <p class="message"><strong>Hey man!</strong> - You have to taste ...</p>
+                                        <div class="actions">
+                                            <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
+                                            <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
+                                            <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/tag.png" alt="label"></a>
+                                            <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="read"></i>
+                                        <img class="avatar" src="assets/img/photo03.jpg" alt="avatar">
+                                        <p class="sender">Leonard N.</p>
+                                        <p class="message"><strong>New Mac :D</strong> - So happy with ...</p>
+                                        <div class="actions">
+                                            <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
+                                            <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
+                                            <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/tag.png" alt="label"></a>
+                                            <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="read"></i>
+                                        <img class="avatar" src="assets/img/photo04.jpg" alt="avatar">
+                                        <p class="sender">Peter B.</p>
+                                        <p class="message"><strong>Thank you</strong> - Finally I can ...</p>
+                                        <div class="actions">
+                                            <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/undo.png" alt="reply"></a>
+                                            <a><img src="http://png-1.findicons.com/files//icons/2232/wireframe_mono/16/star_fav.png" alt="favourite"></a>
+                                            <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/tag.png" alt="label"></a>
+                                            <a><img src="http://png-4.findicons.com/files//icons/2232/wireframe_mono/16/trash.png" alt="delete"></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- /dash-unit -->
+                </div><!-- /span3 -->
+            </div>
+            <div class="col-sm-3 col-lg-3">
 
-                <!-- DONUT CHART BLOCK -->
+
+            </div><!-- /row -->
+            <div class="row">
+                <!-- LOCAL TIME BLOCK -->
                 <div class="col-sm-3 col-lg-3">
-                    <div class="dash-unit">
-                        <dtitle>Disk Space</dtitle>
-                        <hr>
-                        <div id="space"></div>
-                        <h2>65%</h2>
-                    </div>
-                </div>
-
-                <div class="col-sm-3 col-lg-3">
-
-                    <!-- LOCAL TIME BLOCK -->
                     <div class="half-unit">
                         <dtitle>Local Time</dtitle>
                         <hr>
@@ -148,16 +197,6 @@ require_once 'pdo.php';
                             <digiclock>12:45:25</digiclock>
                         </div>
                     </div>
-
-                    <!-- SERVER UPTIME -->
-                    <div class="half-unit">
-                        <dtitle>Server Uptime</dtitle>
-                        <hr>
-                        <div class="cont">
-                            <p><img src="assets/img/up.png" alt=""> <bold>Up</bold> | 356ms.</p>
-                        </div>
-                    </div>
-
                 </div>
             </div><!-- /row -->
 
@@ -196,11 +235,7 @@ require_once 'pdo.php';
 
 
 
-
-
-
-
-                    </div> <!-- /container -->
+        </div> <!-- /container -->
         <div id="footerwrap">
             <footer class="clearfix"></footer>
             <div class="container">
